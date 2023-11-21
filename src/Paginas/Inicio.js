@@ -1,43 +1,36 @@
-import React from "react";
-import LottieView from "lottie-react-native";
+// import LottieView from "lottie-react-native";
+import React from 'react';
+import { Button } from 'react-native';
 
-function Inicio() {
+
+function Inicio({navigation}) {
   return (
     <div>
       <header>
         <h1 className="h1">¿Qué te gustaría comer hoy?</h1>
       </header>
-        <br />
-        <div className="eleccion-container">
-          <p className="eleccion1">
-            <strong>Ensaladas</strong>
-          </p>
-          <p className="eleccion2">
-            <strong>Pastas</strong>    
-          </p>
-        </div>
+      <br />
+      <div className="eleccion-container">
+        <p className="eleccion1">
+          <strong>Ensaladas</strong>
+        </p>
+        <p className="eleccion2">
+          <strong>Pastas</strong>
+        </p>
+      </div>
 
-        <div className="Lotti">
-        <LottieView
-            style={{ height: 800, width: 800 }} // Adjust the height and width as desired
-            source={require("../Animation/Ensalada.json")}
-            autoPlay
-            loop
-          />
-
-        <LottieView
-              style={{ height: 200, width: 200 }} // Adjust the height and width as desired
-              source={require("../Animation/Pasta.json")}
-              autoPlay
-              loop
-            />
-        </div>
-      
+      <Button>
+      Siguiente
+        onPress={() => navigation.navigate('CombosEnsaladas')}
+      </Button>
+        
     </div>
+
   );
 }
 
 export default Inicio;
+
 
 // import React, { useEffect, useRef } from "react";
 //  import { Animated, Easing } from "react-native";

@@ -64,6 +64,67 @@
 }
 
 .Imagen img {
-  margin-right: 10px; /* Ajusta el margen entre las imágenes según tus necesidades */
+  margin-right: 10px;
   justify-content: center;
+}
+
+.menu {
+    width: 80%;
+    background-color: rgb(108, 41, 48);
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px;
+    max-width: 500px;
+    color: white;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.item p {
+  display: inline-block;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  font-size: 18px;
+}
+
+.pasta {
+  text-align: left;
+  width: 75%;
+  font-size: 80px;
+}
+
+.ImagenBoton{
+  display: flex;
+  align-items: center;
+}
+
+.ImaPasta {
+  margin-right: 10px;
+}
+
+.Pagos{
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 35px;
+  letter-spacing: 6px;
+}
+
+.totalpago{
+  width: 80%;
+    background-color: rgb(255, 255, 255);
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px;
+    max-width: 500px;
+    color: rgb(108, 41, 48);
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.MetodoPago{
+  width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px;
+    max-width: 500px;
+    color: rgb(108, 41, 48);
+    font-family: 'Courier New', Courier, monospace;
+
 }
