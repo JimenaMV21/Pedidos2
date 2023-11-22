@@ -4,8 +4,10 @@ import EnsaCapr from '../Images/EnsaCapr.jpeg';
 import EnsaFru from '../Images/EnsaFru.jpg';
 import EnsaGri from '../Images/EnsaGri.jpeg';
 import EnsaWal from '../Images/EnsaWal.jpg';
+import {Button} from 'react-native';
 
-function MenuEnsaladas() {
+
+function MenuEnsaladas({navigation}) {
   const [textoBoton1, setTextoBoton1] = useState('Selección');
   const [textoBoton2, setTextoBoton2] = useState('Selección');
   const [textoBoton3, setTextoBoton3] = useState('Selección');
@@ -181,8 +183,14 @@ function MenuEnsaladas() {
             </button>
           </div>
 
-
         </div>
+
+        <Button
+          title="Siguiente"
+          color="red"
+          style={{ alignSelf: 'center' }}
+          onPress={() => navigation.navigate('Complementos')}
+      />
       </div>
     </div>
   );

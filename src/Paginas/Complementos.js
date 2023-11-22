@@ -4,8 +4,10 @@ import Vege from '../Images/Vege.jpg';
 import Arroz from '../Images/Arroz.jpg';
 import Pure from '../Images/Pure.jpg';
 import Ensa from '../Images/Ensa.jpg';
+import {Button} from 'react-native';
 
-function MenuComplementos() {
+
+function MenuComplementos({navigation}) {
   const [textoBoton1, setTextoBoton1] = useState('Selección');
   const [textoBoton2, setTextoBoton2] = useState('Selección');
   const [textoBoton3, setTextoBoton3] = useState('Selección');
@@ -65,7 +67,7 @@ function MenuComplementos() {
         }}
       >
         <header>
-          <h1 className="h1">Nuestro Menú de Ensaladas</h1>
+          <h1 className="h1">Nuestro Menú de Complementos</h1>
         </header>
 
         <div className="menu">
@@ -181,8 +183,14 @@ function MenuComplementos() {
             </button>
           </div>
 
-
         </div>
+
+        <Button
+          title="Siguiente"
+          color="red"
+          style={{ alignSelf: 'center' }}
+          onPress={() => navigation.navigate('MenuAderezos')}
+      />
       </div>
     </div>
   );

@@ -1,29 +1,62 @@
 // import LottieView from "lottie-react-native";
 import React from 'react';
-import { Button } from 'react-native';
+import { Text, TouchableOpacity } from 'react-native';
+import pastaini from '../Images/pastaini.png';
+import ensaini from '../Images/ensaini.png';
 
 
 function Inicio({navigation}) {
   return (
-    <div>
+    <div
+    
+    style={{ 
+      backgroundImage: "url('https://us.123rf.com/450wm/molaruso/molaruso1701/molaruso170100140/70188787-gradiente-resumen-de-desenfoque-de-fondo-horizontal-con-rojo-tendencia-en-colores-pastel-naranja.jpg?ver=6')",
+      backgroundSize: "cover",
+      backgroundPosition: "center",
+      backgroundRepeat: "no-repeat",
+      height:"100vh"
+    }}>
       <header>
         <h1 className="h1">¿Qué te gustaría comer hoy?</h1>
       </header>
+      
       <br />
+
       <div className="eleccion-container">
         <p className="eleccion1">
-          <strong>Ensaladas</strong>
-        </p>
-        <p className="eleccion2">
-          <strong>Pastas</strong>
-        </p>
-      </div>
 
-      <Button>
-      Siguiente
-        onPress={() => navigation.navigate('CombosEnsaladas')}
-      </Button>
-        
+
+        <TouchableOpacity onPress={() => navigation.navigate('CombosEnsaladas')}>
+        <Text style={{ fontFamily: 'Courier New', fontSize:30,fontWeight: 'bold' }}>Ensaladas</Text>
+      </TouchableOpacity>
+
+        </p>
+
+        <img
+              className="ImaPasta"
+              width="400"
+              height="400"
+              src={ensaini}
+              alt="Pasta1"
+            />
+
+        <p className="eleccion2">
+
+        <TouchableOpacity onPress={() => navigation.navigate('CombosPastas')}>
+        <Text style={{ fontFamily: 'Courier New', fontSize:30,fontWeight: 'bold' }}>Pastas</Text>
+      </TouchableOpacity>
+
+        </p>
+
+        <img
+              className="ImaPasta"
+              width="400"
+              height="400"
+              src={pastaini}
+              alt="Pasta1"
+            />
+
+      </div>
     </div>
 
   );

@@ -4,9 +4,11 @@ import Salsa from '../Images/Salsa.jpeg';
 import Aderezo from '../Images/Aderezo.jpg';
 import Vinagreta from '../Images/Vinagreta.jpeg';
 import Pesto from '../Images/Pesto.jpeg';
+import {Button } from 'react-native';
 
 
-function MenuAderezos() {
+
+function MenuAderezos({navigation}) {
   const [textoBoton1, setTextoBoton1] = useState('Selección');
   const [textoBoton2, setTextoBoton2] = useState('Selección');
   const [textoBoton3, setTextoBoton3] = useState('Selección');
@@ -184,6 +186,13 @@ function MenuAderezos() {
 
 
         </div>
+
+        <Button
+          title="Siguiente"
+          color="red"
+          style={{ alignSelf: 'center' }}
+          onPress={() => navigation.navigate('Pagos')}
+      />
       </div>
     </div>
   );

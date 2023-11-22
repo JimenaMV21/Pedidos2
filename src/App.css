@@ -12,6 +12,7 @@
   font-size: 60px;
   color: rgb(255, 255, 255);
   background-color: rgb(88, 14, 23);
+  text-align: center;
 }
 
 .eleccion1{
@@ -39,6 +40,7 @@
 .BotonLista{
   border: 2px solid; 
   font-family: 'Courier New', Courier, monospace;
+  justify-content: center;
 
 }
 
@@ -50,17 +52,18 @@
 
 .btn {
    position: relative;
-
    padding: 20px 50px;
    text-decoration: none;
    color: black;
    letter-spacing: 3px;
    transition: all 0.6s ease;
+   justify-content: center;
 }
 
 .Imagen {
   display: flex;
   justify-content: center;
+  flex-Wrap: wrap;
 }
 
 .Imagen img {
@@ -105,6 +108,7 @@
   font-family: 'Courier New', Courier, monospace;
   font-size: 35px;
   letter-spacing: 6px;
+  text-align: center;
 }
 
 .totalpago{
@@ -127,4 +131,9 @@
     color: rgb(108, 41, 48);
     font-family: 'Courier New', Courier, monospace;
 
+}
+
+.siguiente {
+  background-color: red;
+  justify-content: center;
 }

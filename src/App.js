@@ -20,7 +20,7 @@ function App() {
     <NavigationContainer>
       <Stack.Navigator>
         <Stack.Screen name="Inicio" component={Inicio} />
-        <Stack.Screen name="CombosEnsaldas" component={CombosEnsaladas}/>
+        <Stack.Screen name="CombosEnsaladas" component={CombosEnsaladas}/>
         <Stack.Screen name="CombosPastas" component={CombosPastas}/>
         <Stack.Screen name="MenuEnsaladas" component={MenuEnsaladas}/>
         <Stack.Screen name="MenuPastas" component={MenuPastas}/>

@@ -3,8 +3,10 @@ import PastaBol from '../Images/pastaBol.jpeg';
 import PastaCar from '../Images/PastaCar.jpeg';
 import PastaAl from '../Images/PastaAl.jpeg';
 import PastaLa from '../Images/PastaLa.jpeg';
+import {Button } from 'react-native';
 
-function MenuPastas() {
+
+function MenuPastas({navigation}) {
   const [textoBoton1, setTextoBoton1] = useState('Selección');
   const [textoBoton2, setTextoBoton2] = useState('Selección');
   const [textoBoton3, setTextoBoton3] = useState('Selección');
@@ -52,6 +54,8 @@ function MenuPastas() {
           backgroundPosition: 'center',
           backgroundRepeat: 'no repeat',
           height: '100vh',
+          backgroundImage:
+            "url('https://us.123rf.com/450wm/molaruso/molaruso1701/molaruso170100140/70188787-gradiente-resumen-de-desenfoque-de-fondo-horizontal-con-rojo-tendencia-en-colores-pastel-naranja.jpg?ver=6')",
         }}
       >
         <header>
@@ -150,9 +154,14 @@ function MenuPastas() {
               {textoBoton4}
             </button>
           </div>
-
-
         </div>
+
+        <Button
+          title="Siguiente"
+          color="red"
+          style={{ alignSelf: 'center' }}
+          onPress={() => navigation.navigate('Complementos')}
+      />
       </div>
     </div>
   );
