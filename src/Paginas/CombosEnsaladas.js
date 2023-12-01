@@ -44,7 +44,7 @@ function CombosEnsaladas({navigation}) {
 
       }}>
       <header>
-        <h1 className="h1">Elije tu Combo</h1>
+        <h1 className="h1">¿Qué tipo de Combo te gustaría?</h1>
       </header>
       <br />
 

@@ -1,12 +1,10 @@
 import React, { useState } from 'react';
 import tarjeta from '../Images/tarjeta.png';
-import pagocaja from '../Images/pagocaja.png';
 import paquet from '../Images/paquet.png';
 
 function Pagos() {
     const [textoBoton1, setTextoBoton1] = useState('Selección');
     const [textoBoton2, setTextoBoton2] = useState('Selección');
-    const [textoBoton3, setTextoBoton3] = useState('Selección');
 
     const cambiarTexto1 = () => {
     if (textoBoton1 === 'Selección') {
@@ -24,13 +22,7 @@ function Pagos() {
     }
   };
 
-  const cambiarTexto3 = () => {
-    if (textoBoton3 === 'Selección') {
-      setTextoBoton3('Pagar con este método');
-    } else {
-      setTextoBoton3('Selección');
-    }
-  };
+
 
     return (
         <div>
@@ -98,21 +90,6 @@ function Pagos() {
             />
             <button className="btn BotonLista" onClick={cambiarTexto2}>
               {textoBoton2}
-            </button>
-          </div> 
-            </div>
-
-            <div className="MetodoPago">
-            <div className="ImagenBoton">
-            <img
-              className="ImaPasta"
-              width="120"
-              height="120"
-              src={pagocaja}
-              alt="Pasta1"
-            />
-            <button className="btn BotonLista" onClick={cambiarTexto3}>
-              {textoBoton3}
             </button>
           </div> 
             </div>

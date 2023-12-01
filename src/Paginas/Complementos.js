@@ -1,18 +1,12 @@
 import React, { useState } from 'react';
 import Papas from '../Images/Papas.jpeg';
 import Vege from '../Images/Vege.jpg';
-import Arroz from '../Images/Arroz.jpg';
-import Pure from '../Images/Pure.jpg';
-import Ensa from '../Images/Ensa.jpg';
 import {Button} from 'react-native';
 
 
 function MenuComplementos({navigation}) {
   const [textoBoton1, setTextoBoton1] = useState('Selección');
   const [textoBoton2, setTextoBoton2] = useState('Selección');
-  const [textoBoton3, setTextoBoton3] = useState('Selección');
-  const [textoBoton4, setTextoBoton4] = useState('Selección');
-  const [textoBoton5, setTextoBoton5] = useState('Selección');
 
   const cambiarTexto1 = () => {
     if (textoBoton1 === 'Selección') {
@@ -30,30 +24,6 @@ function MenuComplementos({navigation}) {
     }
   };
 
-  const cambiarTexto3 = () => {
-    if (textoBoton3 === 'Selección') {
-      setTextoBoton3('Añadido');
-    } else {
-      setTextoBoton3('Selección');
-    }
-  };
-
-  const cambiarTexto4 = () => {
-    if (textoBoton4 === 'Selección') {
-      setTextoBoton4('Añadido');
-    } else {
-      setTextoBoton4('Selección');
-    }
-  };
-
-  const cambiarTexto5 = () => {
-    if (textoBoton5 === 'Selección') {
-      setTextoBoton5('Añadido');
-    } else {
-      setTextoBoton5('Selección');
-    }
-  };
-
   return (
     <div>
       <div
@@ -67,7 +37,7 @@ function MenuComplementos({navigation}) {
         }}
       >
         <header>
-          <h1 className="h1">Nuestro Menú de Complementos</h1>
+          <h1 className="h1">¿Cómo te gustaría acompañar tu comida?</h1>
         </header>
 
         <div className="menu">
@@ -119,77 +89,13 @@ function MenuComplementos({navigation}) {
           <br />
           <br />
 
-          <article class="item">
-            <p class="pasta">Arroz Pilaf</p>
-            <p class="precio">$50.00</p>
-          </article>          
-          
-          <p>Descripción: Arroz cocido con cebolla, ajo y caldo de pollo</p>
-
-
-          <div className="ImagenBoton">
-            <img
-              className="ImaPasta"
-              width="120"
-              height="120"
-              src={Arroz}
-              alt="Pasta1"
-            />
-            <button className="btn BotonLista" onClick={cambiarTexto3}>
-              {textoBoton3}
-            </button>
-          </div>
-
-          <br />
-          <br />
-
-          <article class="item">
-            <p class="pasta">Puré de papas</p>
-            <p class="precio">$220.00</p>
-          </article>
-
-          <p>Descripción: Papas cocidas y machacadas con leche, mantequilla, sal y pimienta</p>
-
-          <div className="ImagenBoton">
-            <img
-              className="ImaPasta"
-              width="120"
-              height="120"
-              src={Pure}
-              alt="Pasta1"
-            />
-            <button className="btn BotonLista" onClick={cambiarTexto4}>
-              {textoBoton4}
-            </button>
-          </div>
-
-          <article class="item">
-            <p class="pasta">Ensalada de Quinoa</p>
-            <p class="precio">$65.00</p>
-          </article>
-
-          <p>Descripción: Quinoa cocida, aguacate, tomate, cilantro, maíz, jugo de limón</p>
-
-          <div className="ImagenBoton">
-            <img
-              className="ImaPasta"
-              width="120"
-              height="120"
-              src={Ensa}
-              alt="Pasta1"
-            />
-            <button className="btn BotonLista" onClick={cambiarTexto5}>
-              {textoBoton5}
-            </button>
-          </div>
-
         </div>
 
         <Button
           title="Siguiente"
           color="red"
           style={{ alignSelf: 'center' }}
-          onPress={() => navigation.navigate('MenuAderezos')}
+          onPress={() => navigation.navigate('Complementos2')}
       />
       </div>
     </div>
